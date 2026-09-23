@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>student profile</title>
+    </head>
+    <header>
+        <h1>Student Profile</h1>
+        <p>Create your profile for the Smart Event Management Portal</p>
+    </header>
+
+<body>
+
+
+    <main>
+
+        <form>
+
+            <!-- Personal Information -->
+            <fieldset>
+                <legend>Personal Information</legend>
+
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" required>
+                <br><br>
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone">
+                <br><br>
+
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob">
+                <br><br>
+
+                <label>Gender:</label>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">Other</label>
+
+            </fieldset>
+
+            <br>
+
+            <!-- College Information -->
+            <fieldset>
+                <legend>College Information</legend>
+
+                <label for="studentid">Student ID:</label>
+                <input type="text" id="studentid" name="studentid" required>
+                <br><br>
+
+                <label for="college">College Name:</label>
+                <input type="text" id="college" name="college" required>
+                <br><br>
+
+                <label for="course">Course / Branch:</label>
+                <input type="text" id="course" name="course" placeholder="e.g. B.Tech CSE">
+                <br><br>
+
+                <label for="year">Year:</label>
+                <select id="year" name="year">
+                    <option value="">Select Year</option>
+                    <option value="1">1st Year</option>
+                    <option value="2">2nd Year</option>
+                    <option value="3">3rd Year</option>
+                    <option value="4">4th Year</option>
+                </select>
+                <br><br>
+
+            </fieldset>
+
+            <br>
+
+            <!-- Skills -->
+            <fieldset>
+
+            <br>
+
+            <!-- Interests -->
+            <fieldset>
+                <legend>Interests</legend>
+
+                <p>What type of events are you interested in?</p>
+
+                <input type="checkbox" id="hackathons" name="interests" value="hackathons">
+                <label for="hackathons">Hackathons</label>
+                <br>
+
+                <input type="checkbox" id="workshops" name="interests" value="workshops">
+                <label for="workshops">Workshops</label>
+                <br>
+
+                <input type="checkbox" id="coding" name="interests" value="coding">
+                <label for="coding">Coding Competitions</label>
+                <br>
+
+                <input type="checkbox" id="cultural" name="interests" value="cultural">
+                <label for="cultural">Cultural Events</label>
+                <br>
+
+                <input type="checkbox" id="sports" name="interests" value="sports">
+                <label for="sports">Sports</label>
+                <br>
+
+                <input type="checkbox" id="entrepreneurship" name="interests" value="entrepreneurship">
+                <label for="entrepreneurship">Entrepreneurship</label>
+                <br>
+
+                <input type="checkbox" id="seminars" name="interests" value="seminars">
+                <label for="seminars">Seminars</label>
+
+            </fieldset>
+
+            <br>
+
+            <!-- Event Preferences -->
+            <fieldset>
+                <legend>Event Preferences</legend>
+
+                <label for="participation">Preferred Participation:</label>
+
+                <select id="participation" name="participation">
+                    <option value="">Select</option>
+                    <option value="participant">Participant</option>
+                    <option value="volunteer">Volunteer</option>
+                    <option value="organizer">Organizer</option>
+                </select>
+
+                <br><br>
+
+                <label for="eventtype">Preferred Event Type:</label>
+
+                <select id="eventtype" name="eventtype">
+                    <option value="">Select Event Type</option>
+                    <option value="technical">Technical</option>
+                    <option value="cultural">Cultural</option>
+                    <option value="sports">Sports</option>
+                    <option value="academic">Academic</option>
+                    <option value="entrepreneurship">Entrepreneurship</option>
+                    <option value="social">Social</option>
+                </select>
+
+            </fieldset>
+
+            <br>
+
+            <!-- About Student -->
+            <fieldset>
+                <legend>About You</legend>
+
+                <label for="about">Tell us something about yourself:</label>
+                <br><br>
+
+                <textarea
+                    id="about"
+                    name="about"
+                    rows="5"
+                    cols="50"
+                    placeholder="Write a short introduction about yourself...">
+                </textarea>
+
+            </fieldset>
+
+            <br>
+
+            <!-- Submit -->
+            <button type="submit">Create Profile</button>
+            <button type="reset">Reset</button>
+
+        </form>
+
+    </main>
+
+    <footer>
+        <p>Smart Event Management Portal</p>
+    </footer>
+
+</body>
+</html>
+```
+
+
+
+           </fieldset>
+
+           
+        
+
+    </form>
+</body>
+</html>
