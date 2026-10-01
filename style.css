@@ -1,0 +1,39 @@
+/* Normal text, labels aur form fields */
+body {
+    background-color: #f7f7f8;
+}
+body,
+input,
+select,
+textarea {
+    font-family: "Poppins", sans-serif;
+}
+
+/* Main heading aur section titles */
+h1,
+legend {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+}
+
+/* Main action button */
+button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+}
+.profile-card {
+    background-color: white;
+    border-radius: 16px;
+    padding: 24px;
+}
+body {
+    background-color: #EBE3DB; /* poore page ka halka background */
+}
+
+fieldset {
+    background-color: #F0F0F0;
+    padding: 20px;
+    border: 1px solid #e2e4ee;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
