@@ -1,0 +1,37 @@
+/* ---------- COLOURS AND BASICS ---------- */
+body { font-family: Arial, sans-serif; background: #F8FAFC; color: #0F172A; margin: 0; }
+header { background: #4F46E5; color: white; padding: 16px 24px; font-size: 20px; font-weight: bold; }
+.box { max-width: 480px; margin: 24px auto; background: white; border: 1px solid #E2E8F0;
+       border-radius: 12px; padding: 24px; }
+.hidden { display: none; }
+
+/* ---------- FORM ---------- */
+label { display: block; margin-top: 14px; font-weight: bold; font-size: 14px; }
+input, select { width: 100%; padding: 10px; margin-top: 6px; box-sizing: border-box;
+                border: 1px solid #E2E8F0; border-radius: 8px; font-size: 15px; }
+.error { color: #DC2626; font-size: 13px; margin-top: 10px; min-height: 16px; }
+button { width: 100%; padding: 12px; margin-top: 16px; border: none; border-radius: 8px;
+         background: #4F46E5; color: white; font-size: 16px; cursor: pointer; }
+button:hover { background: #4338CA; }
+.pay-btn { background: #F97316; }
+.total { font-size: 20px; font-weight: bold; margin-top: 16px; }
+
+/* ---------- TICKET ---------- */
+.ticket { border: 1px solid #E2E8F0; border-radius: 12px; overflow: hidden; }
+.ticket-top { background: linear-gradient(135deg, #4F46E5, #7C3AED); color: white; padding: 18px; }
+.ticket-bottom { padding: 18px; border-top: 2px dashed #E2E8F0; display: flex;
+                 justify-content: space-between; gap: 12px; }
+.ticket-bottom p { margin: 4px 0; }
+.badge { display: inline-block; background: #DCFCE7; color: #15803D; padding: 4px 12px;
+         border-radius: 999px; font-size: 12px; margin-top: 8px; }
+.qr { width: 110px; height: 110px; border: 1px solid #E2E8F0; padding: 5px;
+      display: grid; grid-template-columns: repeat(9, 1fr); }
+.qr i { background: #0F172A; }
+.qr i.w { background: white; }
+
+/* ---------- PRINT / SAVE AS PDF: show only the ticket ---------- */
+@media print {
+  header, button { display: none; }
+  body { background: white; }
+  .box { border: none; margin: 0 auto; }
+}
