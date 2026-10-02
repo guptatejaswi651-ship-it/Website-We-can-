@@ -1,29 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>student profile</title>
-        <link rel="stylesheet" href="style.css">
-        <head>
-    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student profile</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Poppins:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Dancing+Script:wght@600;700&family=Playfair+Display:wght@600;700;800&family=Poppins:wght@400;500;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
     <header>
         <h1>Student Profile</h1>
         <p>Create your profile for the Smart Event Management Portal</p>
     </header>
 
-<body>
-
-
     <main>
-
         <form>
-
             <!-- Personal Information -->
             <fieldset>
                 <legend>Personal Information</legend>
@@ -31,6 +24,7 @@
                 <label for="fullname">Full Name:</label>
                 <input type="text" id="fullname" name="fullname" required>
                 <br><br>
+
                 <label for="phone">Phone Number:</label>
                 <input type="tel" id="phone" name="phone">
                 <br><br>
@@ -42,16 +36,11 @@
                 <label>Gender:</label>
                 <input type="radio" id="male" name="gender" value="male">
                 <label for="male">Male</label>
-
                 <input type="radio" id="female" name="gender" value="female">
                 <label for="female">Female</label>
-
                 <input type="radio" id="other" name="gender" value="other">
                 <label for="other">Other</label>
-
             </fieldset>
-
-            <br>
 
             <!-- College Information -->
             <fieldset>
@@ -77,71 +66,49 @@
                     <option value="3">3rd Year</option>
                     <option value="4">4th Year</option>
                 </select>
-                <br><br>
-
             </fieldset>
-
-            <br>
-
-            <!-- Skills -->
-            <fieldset>
-
-            <br>
 
             <!-- Interests -->
             <fieldset>
                 <legend>Interests</legend>
-
                 <p>What type of events are you interested in?</p>
 
                 <input type="checkbox" id="hackathons" name="interests" value="hackathons">
                 <label for="hackathons">Hackathons</label>
                 <br>
-
                 <input type="checkbox" id="workshops" name="interests" value="workshops">
                 <label for="workshops">Workshops</label>
                 <br>
-
                 <input type="checkbox" id="coding" name="interests" value="coding">
                 <label for="coding">Coding Competitions</label>
                 <br>
-
                 <input type="checkbox" id="cultural" name="interests" value="cultural">
                 <label for="cultural">Cultural Events</label>
                 <br>
-
                 <input type="checkbox" id="sports" name="interests" value="sports">
                 <label for="sports">Sports</label>
                 <br>
-
                 <input type="checkbox" id="entrepreneurship" name="interests" value="entrepreneurship">
                 <label for="entrepreneurship">Entrepreneurship</label>
                 <br>
-
                 <input type="checkbox" id="seminars" name="interests" value="seminars">
                 <label for="seminars">Seminars</label>
-
             </fieldset>
-
-            <br>
 
             <!-- Event Preferences -->
             <fieldset>
                 <legend>Event Preferences</legend>
 
                 <label for="participation">Preferred Participation:</label>
-
                 <select id="participation" name="participation">
                     <option value="">Select</option>
                     <option value="participant">Participant</option>
                     <option value="volunteer">Volunteer</option>
                     <option value="organizer">Organizer</option>
                 </select>
-
                 <br><br>
 
                 <label for="eventtype">Preferred Event Type:</label>
-
                 <select id="eventtype" name="eventtype">
                     <option value="">Select Event Type</option>
                     <option value="technical">Technical</option>
@@ -151,53 +118,25 @@
                     <option value="entrepreneurship">Entrepreneurship</option>
                     <option value="social">Social</option>
                 </select>
-
             </fieldset>
-
-            <br>
 
             <!-- About Student -->
             <fieldset>
                 <legend>About You</legend>
-
                 <label for="about">Tell us something about yourself:</label>
-                <br><br>
-
-                <textarea
-                    id="about"
-                    name="about"
-                    rows="5"
-                    cols="50"
-                    placeholder="Write a short introduction about yourself...">
-                </textarea>
-
+                <textarea id="about" name="about" rows="5" cols="50" placeholder="Write a short introduction about yourself..."></textarea>
             </fieldset>
 
-            <br>
-
             <!-- Submit -->
-            <button type="submit">Create Profile</button>
-            <button type="reset">Reset</button>
-
+            <div class="form-actions">
+                <button type="submit">Create Profile</button>
+                <button type="reset">Reset</button>
+            </div>
         </form>
-
     </main>
 
     <footer>
         <p>Smart Event Management Portal</p>
     </footer>
-
-</body>
-</html>
-```
-
-
-
-           </fieldset>
-
-           
-        
-
-    </form>
 </body>
 </html>
