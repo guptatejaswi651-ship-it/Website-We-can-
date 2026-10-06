@@ -1,1 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Events Details</h1>
+    <h2 allign="centre">Freshers</h2>
+    <p><strong>Welcome Speech:</strong> The event typically starts with a welcome speech from the principal or senior faculty members, highlighting the importance of the new academic year.</p>
+    <p><strong>Orientation Activities:</strong> New students participate in various orientation activities to familiarize themselves with the college environment and academic programs.</p>
+    <p><strong>Introduction & Ramp Walk:</strong> New students introduce themselves on stage, often participating in a ramp walk showcasing themed outfits.</p>
+    <p><strong>Mr. & Ms. Fresher Contest:</strong> A multi-round competition featuring talent showcases, fun tasks, and a final question-and-answer round with judges to select the best-performing newcomers.</p>
+<br>
+    <h2 allign="centre">Dandiya Night</h2>
+    <p><strong>Dance and Music:</strong> Participants dance in synchronized circles to the rhythmic beats of Garba and Dandiya folk music, often followed by a high-energy DJ or fusion music session.</p>
+    <p><strong>Traditional Attire:</strong> Students and staff dress up in colorful traditional ethnic wear like kediyus, chaniya cholis, and kurtas</p>
+    <p><strong>Stalls and Food:</strong> Organizing committees usually set up stalls for refreshments, snacks, and colored wooden sticks (dandiya sticks)</p>
+ <br>
+    <h2 allign="centre">Tech Fest</h2>
+    <p><strong>Duration:</strong> Typically spans 1 to 3 days on a college campus</p>
+    <p><strong>Competitions:</strong> Features coding contests, robotics battles, hackathons, bridge-building challenges, and project expos</p>
+    <p><strong>Learning Opportunities:</strong> Includes hands-on workshops, expert keynote lectures, and corporate sponsor exhibitions.</p>
+    <p><strong>Networking:</strong> Brings together students, academic faculty, and industry professionals to exchange real-world tech ideas.</p>
+<br>
+    <h2 allign="centre">Diwali Celebration</h2>
+    <P><strong>Lighting Candles:</strong> A vibrant tradition that brings student communities together to celebrate the festival of lights. </P>
+    <p><strong>Rangoli & Diya Decorating:</strong> Students create intricate floor patterns using colored powders, rice, and flower petals at campus entrances, accompanied by the traditional lighting of clay diyas.</p>
+    <p><strong>Traditional Dress Days:</strong> Faculty and students dress in traditional Indian attire like sarees and kurtas to add to the festive atmosphere.</p>
+    <p><strong>Cultural Performances:</strong> Events often feature classical or folk welcome dances, musical performances by student clubs, and theatrical skits depicting the significance of the festival.</p>
+<br>
+    <h2 allign="centre">Sports Events</h2>
+    <p><strong>Opening Ceremony:</strong> The event officially begins with a formal march-past by participating teams or student houses, followed by an oath-taking ceremony to uphold sportsmanship, and the symbolic lighting of a sports torch.</p>
+    <p><strong>The Competitions:</strong> Individual and group speed events like 100m, 200m, and 400m sprints, relay races, long jump, high jump, shot put, and javelin throw.High-energy tournaments featuring popular sports such as cricket, football, basketball, volleyball, and kabaddi.</p>
+    <p><strong>Closing and Award Ceremony:</strong> The event concludes with an official prize distribution where winning athletes and teams are awarded trophies, medals, and certificates. A grand champion trophy is usually given to the overall highest-scoring department or house.</p>
+<br>
+    <h2 allign="centre">A Startup Meetup</h2>
+    <p><strong>Icebreakers & Ideation:</strong> The meetup usually kicks off with casual networking. Students grab a coffee, introduce themselves, and share what they are working on or what skills they bring to the table (e.g., coding, marketing, design).</p>
+    <p><strong>Elevator Pitches:</strong> Founders or students with rough ideas get a few minutes to pitch their concepts to the room. This helps them practice their public speaking and find potential co-founders or team members.</p>
+    <p><strong>Guest Speaker Talks:</strong> Successful local entrepreneurs, angel investors, or alumni are often invited to share their startup journeys, offer practical advice, and answer questions about funding, scaling, or avoiding common pitfalls.</p>
+    <p><strong>Brainstorming and Feedback Sessions:</strong> Attendees break into smaller groups to dissect specific business problems. Peers and mentors provide honest, constructive feedback on product ideas, target markets, and business models.</p>
+    
+
+</body>
+</html>
 
