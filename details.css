@@ -1,0 +1,143 @@
+:root {
+  --blush: #eddfd7;
+  --ink: #1a1a1a;
+  --accent: #b08968;
+  --page: #eddfd7;
+  --line: #d6c3b8;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--ink);
+  font-family: "Jost", Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+.event {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 72px 24px 48px;
+  text-align: center;
+  border-bottom: 1px solid var(--line);
+}
+.event:last-child { border-bottom: none; }
+
+.event .label {
+  display: block;
+  color: var(--accent);
+  font-size: 0.8rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.event h2 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-weight: 500;
+  font-size: clamp(2.2rem, 6vw, 3.2rem);
+  line-height: 1.15;
+  margin: 0 0 32px;
+}
+
+.event p { margin: 0 0 18px; font-size: 1.05rem; text-align: left; }
+.event p strong {
+  font-weight: 500;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.25rem;
+}
+
+/* ---------- Background stickers ---------- */
+.deco {
+  position: fixed;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Sunburst (left) */
+.deco-sun {
+  top: 22%;
+  left: 2%;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: repeating-conic-gradient(
+    #d6c3b8 0deg 1.5deg,
+    transparent 1.5deg 15deg
+  );
+  opacity: 0.7;
+}
+.deco-sun::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+/* Flower (right) */
+.deco-flower {
+  bottom: 10%;
+  right: 2%;
+  width: 200px;
+  height: 200px;
+}
+
+/* Keep your text above the stickers */
+main {
+  position: relative;
+  z-index: 1;
+}
+
+/* Hide stickers only on small screens */
+@media (max-width: 700px) {
+  .deco { display: none; }
+}
+
+/* ---------- Header, nav and cards ---------- */
+html { scroll-behavior: smooth; }
+
+.hero {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 80px 24px 24px;
+}
+.hero h1 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-weight: 500;
+  font-size: clamp(3rem, 9vw, 5rem);
+  margin: 0;
+}
+.hero p { margin: 8px 0 28px; color: var(--accent); }
+
+.hero nav { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+.hero nav a {
+  color: var(--ink);
+  text-decoration: none;
+  padding: 8px 18px;
+  border: 1px solid var(--line);
+  border-radius: 30px;
+  transition: background 0.2s, color 0.2s;
+}
+.hero nav a:hover { background: var(--accent); color: #fff; }
+
+.event {
+  background: #f6ece6;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  margin: 32px auto;
+  padding: 48px 32px;
+  box-shadow: 0 8px 24px rgba(176, 137, 104, 0.12);
+}
+.event:last-child { border-bottom: 1px solid var(--line); }
+
+main { padding-top: 40px; }
+ 
+
