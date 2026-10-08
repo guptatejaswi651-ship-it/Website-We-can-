@@ -19,6 +19,29 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
+body {
+  position: relative;
+  overflow-x: hidden; /* stops rotated stickers causing sideways scroll */
+}
+
+.sticker {
+  position: absolute;
+  pointer-events: none;
+  z-index: -1;
+  filter:
+    drop-shadow(2px 0 0 #fff) drop-shadow(-2px 0 0 #fff)
+    drop-shadow(0 2px 0 #fff) drop-shadow(0 -2px 0 #fff)
+    drop-shadow(0 6px 10px rgba(58, 45, 40, 0.18));
+}
+
+
+.sticker-bang      { top: 35%; left: 6%; color: var(--grad-b); transform: rotate(-10deg); }
+
+@media (max-width: 760px) {
+  .sticker { display: none; }
+}
+
+
 h1, h3 {
   font-family: 'Playfair Display', Georgia, serif;
   font-weight: 600;
