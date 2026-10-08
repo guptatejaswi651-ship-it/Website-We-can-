@@ -110,7 +110,7 @@ nav a {
 }
 
 nav a:hover,
-nav a[href="dashboard.html"] {
+nav a[aria-current="page"] {
     border-color: rgb(164 131 116 / 28%);
     color: var(--gold-deep);
     background: #D8C9BC;
