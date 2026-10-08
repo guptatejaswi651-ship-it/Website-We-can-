@@ -1,0 +1,1158 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EventHub | Discover Events</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f4efe8;
+            color: #302824;
+            font-family: Arial, sans-serif;
+        }
+
+
+        /* ================= NAVBAR ================= */
+
+        nav {
+            height: 75px;
+            padding: 0 6%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            border-bottom: 1px solid #cfc3b9;
+        }
+
+        .logo {
+            font-family: Georgia, serif;
+            font-size: 27px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 35px;
+            list-style: none;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #302824;
+            font-size: 13px;
+            letter-spacing: 1.5px;
+        }
+
+        .login-btn {
+            border: 1px solid #302824;
+            padding: 10px 18px;
+        }
+
+
+        /* ================= HERO ================= */
+
+        .hero {
+            min-height: 620px;
+            padding: 75px 7%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 60px;
+        }
+
+        .hero-left {
+            width: 52%;
+        }
+
+        .small-title {
+            font-size: 12px;
+            letter-spacing: 4px;
+            color: #806b60;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-family: Georgia, serif;
+            font-size: 72px;
+            line-height: 1.02;
+            font-weight: normal;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            font-style: italic;
+        }
+
+        .hero-description {
+            color: #665b54;
+            font-size: 17px;
+            line-height: 1.7;
+            max-width: 520px;
+            margin-bottom: 35px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 27px;
+            text-decoration: none;
+            font-size: 12px;
+            letter-spacing: 1.5px;
+            border: 1px solid #302824;
+        }
+
+        .btn-dark {
+            background: #302824;
+            color: white;
+        }
+
+        .btn-light {
+            color: #302824;
+        }
+
+
+        /* HERO VISUAL */
+
+        .hero-right {
+            width: 43%;
+            position: relative;
+        }
+
+        .hero-card {
+            height: 430px;
+
+            background: #c4b2a7;
+
+            border-radius: 180px 180px 20px 20px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 110px;
+
+            overflow: hidden;
+        }
+
+        .hero-card-text {
+            position: absolute;
+            bottom: 25px;
+            left: 25px;
+            right: 25px;
+
+            background: rgba(244, 239, 232, 0.92);
+
+            padding: 18px 20px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .hero-card-text small {
+            font-size: 11px;
+            letter-spacing: 1px;
+        }
+
+        .hero-card-text strong {
+            font-family: Georgia, serif;
+            font-size: 18px;
+        }
+
+
+        /* ================= SEARCH ================= */
+
+        .search-wrapper {
+            padding: 0 7%;
+            margin-top: -20px;
+        }
+
+        .search-box {
+            background: #302824;
+            padding: 20px;
+
+            display: flex;
+            gap: 12px;
+
+            box-shadow: 0 12px 30px rgba(48, 40, 36, 0.12);
+        }
+
+        .search-box input {
+            flex: 1;
+
+            padding: 17px 20px;
+
+            border: none;
+            outline: none;
+
+            background: #f4efe8;
+
+            font-size: 14px;
+        }
+
+        .search-box button {
+            padding: 0 30px;
+
+            border: none;
+
+            background: #d8c5b7;
+            color: #302824;
+
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+
+        /* ================= SECTION COMMON ================= */
+
+        section {
+            padding: 90px 7%;
+        }
+
+        .section-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+
+            margin-bottom: 35px;
+        }
+
+        .section-top h2 {
+            font-family: Georgia, serif;
+            font-size: 42px;
+            font-weight: normal;
+        }
+
+        .section-top p {
+            color: #766a62;
+            margin-top: 8px;
+        }
+
+        .view-all {
+            color: #302824;
+            text-decoration: none;
+            font-size: 12px;
+            letter-spacing: 1.5px;
+        }
+
+
+        /* ================= CATEGORIES ================= */
+
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+        }
+
+        .category {
+            background: #e5d8cc;
+            border: 1px solid #c7b9ae;
+
+            padding: 28px 15px;
+
+            text-align: center;
+
+            transition: 0.3s;
+        }
+
+        .category:hover {
+            transform: translateY(-5px);
+            background: #d8c5b7;
+        }
+
+        .category-icon {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .category h3 {
+            font-family: Georgia, serif;
+            font-size: 18px;
+            font-weight: normal;
+        }
+
+
+        /* ================= EVENTS ================= */
+
+        .events {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .event-card {
+            background: #eee6dd;
+            border: 1px solid #c9bdb3;
+        }
+
+        .event-img {
+            height: 220px;
+
+            background: #c4b2a7;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 65px;
+        }
+
+        .event-info {
+            padding: 23px;
+        }
+
+        .event-date {
+            color: #806b60;
+            font-size: 11px;
+            letter-spacing: 1.5px;
+            margin-bottom: 10px;
+        }
+
+        .event-info h3 {
+            font-family: Georgia, serif;
+            font-size: 25px;
+            font-weight: normal;
+            margin-bottom: 10px;
+        }
+
+        .event-info p {
+            color: #6d625b;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .event-footer {
+            border-top: 1px solid #cfc3b9;
+
+            padding-top: 15px;
+
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .event-footer a {
+            text-decoration: none;
+            color: #302824;
+
+            font-size: 11px;
+            letter-spacing: 1px;
+        }
+
+
+        /* ================= FEATURED EVENT ================= */
+
+        .featured {
+            background: #302824;
+
+            color: white;
+
+            min-height: 430px;
+
+            display: flex;
+            align-items: center;
+
+            padding: 55px;
+
+            gap: 60px;
+        }
+
+        .featured-image {
+            width: 48%;
+            height: 320px;
+
+            background: #8e796d;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 90px;
+        }
+
+        .featured-content {
+            width: 52%;
+        }
+
+        .featured-label {
+            font-size: 11px;
+            letter-spacing: 3px;
+            color: #d7c6b9;
+        }
+
+        .featured h2 {
+            font-family: Georgia, serif;
+            font-size: 48px;
+            font-weight: normal;
+
+            margin: 15px 0;
+        }
+
+        .featured p {
+            color: #d4c9c2;
+            line-height: 1.7;
+            max-width: 500px;
+
+            margin-bottom: 25px;
+        }
+
+        .featured .btn {
+            border-color: #eee6dd;
+            color: white;
+        }
+
+
+        /* ================= WHY EVENTHUB ================= */
+
+        .why {
+            text-align: center;
+        }
+
+        .why > p {
+            max-width: 600px;
+            margin: 15px auto 50px;
+
+            color: #6d625b;
+            line-height: 1.7;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+
+            text-align: left;
+        }
+
+        .step {
+            padding: 30px;
+
+            border-top: 1px solid #a99a90;
+        }
+
+        .step-number {
+            font-family: Georgia, serif;
+            font-size: 35px;
+            color: #8b766a;
+
+            margin-bottom: 20px;
+        }
+
+        .step h3 {
+            font-family: Georgia, serif;
+            font-size: 24px;
+            font-weight: normal;
+
+            margin-bottom: 10px;
+        }
+
+        .step p {
+            color: #6d625b;
+            line-height: 1.6;
+        }
+
+
+        /* ================= HOST ================= */
+
+        .host {
+            background: #d8c5b7;
+
+            text-align: center;
+
+            padding: 75px 20px;
+        }
+
+        .host h2 {
+            font-family: Georgia, serif;
+            font-size: 45px;
+            font-weight: normal;
+
+            margin-bottom: 15px;
+        }
+
+        .host p {
+            color: #5f534c;
+            margin-bottom: 28px;
+        }
+
+
+        /* ================= FINAL CTA ================= */
+
+        .final {
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .final h2 {
+            font-family: Georgia, serif;
+            font-size: 50px;
+            font-weight: normal;
+
+            margin-bottom: 15px;
+        }
+
+        .final p {
+            color: #6d625b;
+            margin-bottom: 30px;
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: #302824;
+            color: white;
+
+            padding: 45px 7%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        footer h2 {
+            font-family: Georgia, serif;
+            font-weight: normal;
+            margin-bottom: 8px;
+        }
+
+        footer p {
+            color: #cfc3b9;
+            font-size: 13px;
+        }
+
+
+        /* ================= RESPONSIVE ================= */
+
+        @media(max-width: 850px) {
+
+            nav ul {
+                gap: 12px;
+            }
+
+            nav a {
+                font-size: 10px;
+            }
+
+            .hero {
+                flex-direction: column;
+            }
+
+            .hero-left,
+            .hero-right {
+                width: 100%;
+            }
+
+            .hero h1 {
+                font-size: 50px;
+            }
+
+            .categories {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .events,
+            .steps {
+                grid-template-columns: 1fr;
+            }
+
+            .featured {
+                flex-direction: column;
+            }
+
+            .featured-image,
+            .featured-content {
+                width: 100%;
+            }
+
+            .search-box {
+                flex-direction: column;
+            }
+
+            .search-box button {
+                padding: 15px;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav>
+
+        <div class="logo">
+            EventHub
+        </div>
+
+        <ul>
+
+            <li>
+                <a href="Home.html">HOME</a>
+            </li>
+
+            <li>
+                <a href="#">EVENTS</a>
+            </li>
+
+            <li>
+                <a href="#">MY TICKETS</a>
+            </li>
+
+            <li>
+                <a href="#">DASHBOARD</a>
+            </li>
+
+            <li>
+                <a href="Login_signupfile.html" class="login-btn">
+                    LOGIN
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <div class="hero-left">
+
+            <div class="small-title">
+                YOUR CAMPUS. YOUR COMMUNITY.
+            </div>
+
+            <h1>
+                Discover what's<br>
+                <span>happening.</span>
+            </h1>
+
+            <p class="hero-description">
+
+                From hackathons and workshops to cultural fests
+                and sports events — discover everything happening
+                around your campus, all in one place.
+
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#" class="btn btn-dark">
+                    EXPLORE EVENTS →
+                </a>
+
+                <a href="#" class="btn btn-light">
+                    HOST AN EVENT
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-right">
+
+            <div class="hero-card">
+                🎪
+            </div>
+
+            <div class="hero-card-text">
+
+                <div>
+                    <small>NEXT UP</small>
+                    <br>
+                    <strong>Campus Fest 2026</strong>
+                </div>
+
+                <div>
+                    →
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= SEARCH ================= -->
+
+    <div class="search-wrapper">
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                placeholder="Search events, workshops, hackathons..."
+            >
+
+            <button>
+                SEARCH
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================= CATEGORIES ================= -->
+
+    <section>
+
+        <div class="section-top">
+
+            <div>
+
+                <h2>
+                    Explore categories
+                </h2>
+
+                <p>
+                    Find events based on what you love.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="categories">
+
+            <div class="category">
+
+                <div class="category-icon">💻</div>
+
+                <h3>
+                    Technology
+                </h3>
+
+            </div>
+
+
+            <div class="category">
+
+                <div class="category-icon">🎭</div>
+
+                <h3>
+                    Cultural
+                </h3>
+
+            </div>
+
+
+            <div class="category">
+
+                <div class="category-icon">🏆</div>
+
+                <h3>
+                    Sports
+                </h3>
+
+            </div>
+
+
+            <div class="category">
+
+                <div class="category-icon">🎓</div>
+
+                <h3>
+                    Workshops
+                </h3>
+
+            </div>
+
+
+            <div class="category">
+
+                <div class="category-icon">💡</div>
+
+                <h3>
+                    Competitions
+                </h3>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= UPCOMING EVENTS ================= -->
+
+    <section>
+
+        <div class="section-top">
+
+            <div>
+
+                <h2>
+                    Upcoming events
+                </h2>
+
+                <p>
+                    Don't miss what's happening around you.
+                </p>
+
+            </div>
+
+            <a href="#" class="view-all">
+                VIEW ALL EVENTS →
+            </a>
+
+        </div>
+
+
+        <div class="events">
+
+
+            <div class="event-card">
+
+                <div class="event-img">
+                    💻
+                </div>
+
+                <div class="event-info">
+
+                    <div class="event-date">
+                        18 OCT • 10:00 AM
+                    </div>
+
+                    <h3>
+                        Tech Fest
+                    </h3>
+
+                    <p>
+                        Seminar Hall
+                    </p>
+
+                    <div class="event-footer">
+
+                        <strong>
+                            ₹149
+                        </strong>
+
+                        <a href="#">
+                            VIEW EVENT →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="event-card">
+
+                <div class="event-img">
+                    🎤
+                </div>
+
+                <div class="event-info">
+
+                    <div class="event-date">
+                        20 OCT • 5:00 PM
+                    </div>
+
+                    <h3>
+                        Cultural Night
+                    </h3>
+
+                    <p>
+                        Main Auditorium
+                    </p>
+
+                    <div class="event-footer">
+
+                        <strong>
+                            ₹199
+                        </strong>
+
+                        <a href="#">
+                            VIEW EVENT →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="event-card">
+
+                <div class="event-img">
+                    🏅
+                </div>
+
+                <div class="event-info">
+
+                    <div class="event-date">
+                        22 OCT • 9:00 AM
+                    </div>
+
+                    <h3>
+                        Sports Day
+                    </h3>
+
+                    <p>
+                        College Ground
+                    </p>
+
+                    <div class="event-footer">
+
+                        <strong>
+                            FREE
+                        </strong>
+
+                        <a href="#">
+                            VIEW EVENT →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= FEATURED EVENT ================= -->
+
+    <section>
+
+        <div class="featured">
+
+            <div class="featured-image">
+                🚀
+            </div>
+
+
+            <div class="featured-content">
+
+                <div class="featured-label">
+                    FEATURED EVENT
+                </div>
+
+                <h2>
+                    WhyCode 4U Hackathon
+                </h2>
+
+                <p>
+
+                    Build something amazing, collaborate with
+                    other students and compete for exciting prizes.
+                    Everything you need for the hackathon is available
+                    in one place.
+
+                </p>
+
+                <a href="#" class="btn">
+                    EXPLORE EVENT →
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= WHY EVENTHUB ================= -->
+
+    <section class="why">
+
+        <div class="section-top"
+             style="display:block;text-align:center;">
+
+            <h2>
+                Everything. In one place.
+            </h2>
+
+        </div>
+
+        <p>
+
+            No more searching through WhatsApp groups,
+            Instagram posts, posters and random registration links.
+            EventHub brings campus events together.
+
+        </p>
+
+
+        <div class="steps">
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    01
+                </div>
+
+                <h3>
+                    Discover
+                </h3>
+
+                <p>
+                    Find events that match your interests
+                    and see what's happening around campus.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    02
+                </div>
+
+                <h3>
+                    Register
+                </h3>
+
+                <p>
+                    Register for your favourite event
+                    without searching multiple platforms.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    03
+                </div>
+
+                <h3>
+                    Experience
+                </h3>
+
+                <p>
+                    Get your ticket and event information
+                    and enjoy the experience.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= HOST EVENT ================= -->
+
+    <section class="host">
+
+        <h2>
+            Have an event to share?
+        </h2>
+
+        <p>
+            Create your event and reach students across campus.
+        </p>
+
+        <a href="#" class="btn btn-dark">
+            HOST YOUR EVENT →
+        </a>
+
+    </section>
+
+
+
+    <!-- ================= FINAL CTA ================= -->
+
+    <section class="final">
+
+        <h2>
+            There's always something happening.
+        </h2>
+
+        <p>
+            Find your next event today.
+        </p>
+
+        <a href="#" class="btn btn-dark">
+            EXPLORE ALL EVENTS →
+        </a>
+
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div>
+
+            <h2>
+                EventHub
+            </h2>
+
+            <p>
+                Your campus. Your events. Your place.
+            </p>
+
+        </div>
+
+
+        <p>
+            Events &nbsp; | &nbsp;
+            My Tickets &nbsp; | &nbsp;
+            Dashboard &nbsp; | &nbsp;
+            About
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
+```
