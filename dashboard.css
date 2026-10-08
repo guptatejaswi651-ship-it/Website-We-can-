@@ -437,3 +437,11 @@ footer p {
         transition-duration: .01ms !important;
     }
 }
+
+
+button:disabled,
+button:disabled:hover {
+    opacity: .55;
+    cursor: not-allowed;
+    transform: none;
+}

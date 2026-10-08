@@ -364,3 +364,22 @@ footer p {
         transition-duration: .01ms !important;
     }
 }
+
+
+.profile-back {
+    display: inline-block;
+    margin-bottom: 8px;
+    padding: 8px 13px;
+    border: 1px solid rgb(164 131 116 / 35%);
+    border-radius: 8px;
+    color: var(--gold-deep);
+    background: #D8C9BC;
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.profile-back:hover {
+    background: #D1C7BD;
+}
