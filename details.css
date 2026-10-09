@@ -50,14 +50,14 @@ body {
   font-size: 1.25rem;
 }
 
-/* ---------- Background stickers ---------- */
+
 .deco {
   position: fixed;
   z-index: 0;
   pointer-events: none;
 }
 
-/* Sunburst (left) */
+
 .deco-sun {
   top: 22%;
   left: 2%;
@@ -81,7 +81,6 @@ body {
   background: var(--accent);
 }
 
-/* Flower (right) */
 .deco-flower {
   bottom: 10%;
   right: 2%;
@@ -89,18 +88,18 @@ body {
   height: 200px;
 }
 
-/* Keep your text above the stickers */
+
 main {
   position: relative;
   z-index: 1;
 }
 
-/* Hide stickers only on small screens */
+
 @media (max-width: 700px) {
   .deco { display: none; }
 }
 
-/* ---------- Header, nav and cards ---------- */
+
 html { scroll-behavior: smooth; }
 
 .hero {
