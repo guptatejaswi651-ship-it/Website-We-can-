@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colours of Culture | Utsavika</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #faf6f0;
+            color: #38251c;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 7%;
+            background: #fffaf4;
+        }
+
+        nav h2 {
+            font-family: Georgia, serif;
+            font-size: 28px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #38251c;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 55px 20px;
+            background: #BDA69B;
+        }
+
+        .hero .tagline {
+            letter-spacing: 4px;
+            font-size: 14px;
+        }
+
+        .hero h1 {
+            font-family: Georgia, serif;
+            font-size: clamp(32px, 5vw, 54px);
+            margin: 14px 0;
+        }
+
+        .hero p {
+            line-height: 1.8;
+            margin-bottom: 22px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #38251c;
+            color: white;
+            text-decoration: none;
+            padding: 13px 28px;
+            border-radius: 30px;
+            margin-top: 8px;
+        }
+
+        .about {
+            text-align: center;
+            padding: 35px 20px 20px;
+        }
+
+        .about h2,
+        .register h2 {
+            font-family: Georgia, serif;
+            font-size: 30px;
+            margin-bottom: 12px;
+        }
+
+        .about p {
+            max-width: 540px;
+            margin: auto;
+            line-height: 1.7;
+        }
+
+        .details {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 18px;
+            padding: 15px 20px;
+        }
+
+        .detail {
+            background: #f1e5d9;
+            padding: 20px;
+            border-radius: 12px;
+            min-width: 200px;
+            text-align: center;
+            flex: 1;
+            max-width: 290px;
+        }
+
+        .detail h3 {
+            font-family: Georgia, serif;
+            margin-bottom: 8px;
+        }
+
+        .culture-photo {
+            display: block;
+            width: 90%;
+            max-width: 600px;
+            height: 300px;
+            object-fit: cover;
+            margin: 20px auto;
+            border-radius: 12px;
+        }
+
+        .register {
+            text-align: center;
+            padding: 25px 20px;
+            background: #f1e5d9;
+        }
+
+        .register p {
+            margin-bottom: 12px;
+        }
+
+        footer {
+            background: #38251c;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            .hero {
+                padding: 40px 15px;
+            }
+
+            .hero .tagline {
+                letter-spacing: 2px;
+            }
+
+            .culture-photo {
+                height: 230px;
+            }
+
+            .about h2,
+            .register h2 {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <h2>UTSAVIKA</h2>
+        <a href="homepghtml.html"> <b>Home</b></a>
+    </nav>
+
+    <section class="hero">
+        <p class="tagline">TRADITION • TALENT • TOGETHER</p>
+        <h1>Colours of Culture</h1>
+        <p>
+            A celebration of diversity, art and tradition.<br>
+            Experience our culture through music, dance, fashion and more.
+        </p>
+        <a href="#events" class="btn">Explore Events →</a>
+    </section>
+
+    <section class="about">
+        <h2>About the Event</h2>
+        <p>
+            Colours of Culture brings together different art forms,
+            traditions and talent under one roof. From mesmerizing
+            performances to traditional attire, it's a celebration
+            of our rich heritage and diverse identity.
+        </p>
+    </section>
+
+    <section class="details" id="events">
+        <div class="detail">
+            <h3>📅 Date</h3>
+            <p>26 October 2026</p>
+        </div>
+
+        <div class="detail">
+            <h3>📍 Venue</h3>
+            <p>Venue to be announced</p>
+        </div>
+
+        <div class="detail">
+            <h3>🎟️ Entry</h3>
+            <p>Registration required</p>
+        </div>
+    </section>
+
+    <!-- Replace culture.jpg with your actual image filename -->
+    <img src="cultural1.png" alt="Traditional cultural dance performance"
+         alt="Traditional cultural dance performance"
+         class="culture-photo">
+
+    <section class="register">
+        <h2>Be a Part of the Celebration</h2>
+        <p>Register now and showcase your talent!</p>
+        <a href="loginhtml.html" class="btn">Register Now</a>
+    </section>
+
+    <footer>
+        © 2026 Utsavika | Colours of Culture
+    </footer>
+
+</body>
+</html>
+```

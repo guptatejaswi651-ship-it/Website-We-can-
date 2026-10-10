@@ -1,0 +1,140 @@
+```css
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    background: #f2ece5;
+    color: #382923;
+}
+
+nav {
+    background: #ffffff;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h2 {
+    color: #362A24;
+    margin: 0;
+}
+
+nav a {
+    color: #362A24;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 8%;
+    background: #bda397;
+}
+
+.tag {
+    letter-spacing: 3px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: 52px;
+    margin: 20px 0;
+}
+
+.hero p {
+    line-height: 1.8;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 13px 25px;
+    background: #382923;
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+}
+
+.details,
+.activities,
+.register {
+    padding: 55px 8%;
+    text-align: center;
+}
+
+.details > p {
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+.info,
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.info > div,
+.card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 15px;
+}
+
+.card {
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card p {
+    line-height: 1.7;
+}
+
+.register {
+    background: #e7ddd3;
+}
+
+footer {
+    text-align: center;
+    background: #382923;
+    color: white;
+    padding: 20px;
+}
+
+@media (max-width: 650px) {
+    .hero {
+        padding: 65px 6%;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .info,
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
+.techfest-image {
+    display: block;
+    width: 90%;
+    max-width: 600px;
+    height: 350px;
+    object-fit: cover;
+    margin: 30px auto;
+    border-radius: 16px;
+}

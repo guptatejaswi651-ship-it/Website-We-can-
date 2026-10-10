@@ -32,7 +32,6 @@ nav {
     top: 0;
 }
 
- ```css
 nav h2 {
     color: #362A24 !important;
     margin: 0;
@@ -41,7 +40,7 @@ nav h2 {
 nav h2 span {
     color: #362A24 !important;
 }
-```
+
 
 #menu {
     display: flex;
