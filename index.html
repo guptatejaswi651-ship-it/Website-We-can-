@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Techfest 2026 - Registration</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>Techfest 2026</header>
+
+  <!-- ========== PAGE 1: REGISTRATION ========== -->
+  <div class="box" id="page1">
+    <h2>Register</h2>
+    <p>23 Oct 2026 · 9:00 AM · Computer Science Block</p>
+
+    <label>Full name</label>
+    <input id="name" placeholder="Riya Sharma">
+
+    <label>Email</label>
+    <input id="email" placeholder="riya@gmail.com">
+
+    <label>Phone (10 digits)</label>
+    <input id="phone" placeholder="9876543210">
+
+    <label>College and roll number</label>
+    <input id="college" placeholder="Delhi College, 21CS045">
+
+    <label>Ticket type</label>
+    <select id="type" onchange="updateTotal()">
+      <option value="0"> Our college student - Free Pass</option>
+      <option value="200">Our college student - ₹200</option>
+      <option value="300">Other college student - ₹300</option>
+      <option value="400">Alumni / Guest - ₹400</option>
+    </select>
+
+    <label>Number of tickets</label>
+    <select id="qty" onchange="updateTotal()">
+      <option>1</option><option>2</option><option>3</option>
+      <option>4</option><option>5</option>
+    </select>
+
+    <div class="total">Total: <span id="total">₹200</span></div>
+    <div class="error" id="error1"></div>
+    <button onclick="goToPayment()">Continue to payment</button>
+  </div>
+
+  <!-- ========== PAGE 2: PAYMENT ========== -->
+  <div class="box hidden" id="page2">
+    <h2>Payment</h2>
+    <div class="total">Amount to pay: <span id="payTotal"></span></div>
+
+    <label>Payment method</label>
+    <select id="method" onchange="showPayFields()">
+      <option value="upi">UPI</option>
+      <option value="card">Card</option>
+    </select>
+
+    <div id="upiBox">
+      <label>UPI ID</label>
+      <input id="upi" placeholder="riya@okhdfcbank">
+    </div>
+
+    <div id="cardBox" class="hidden">
+      <label>Card number (16 digits)</label>
+      <input id="card" placeholder="1234 5678 9012 3456">
+      <label>Expiry (MM/YY)</label>
+      <input id="expiry" placeholder="08/28">
+      <label>CVV (3 digits)</label>
+      <input id="cvv" type="password" placeholder="123">
+    </div>
+
+    <p style="font-size:13px; color:#64748B">Demo page: no real payment is taken.</p>
+    <div class="error" id="error2"></div>
+    <button class="pay-btn" id="payBtn" onclick="pay()">Pay now</button>
+  </div>
+
+  <!-- ========== PAGE 3: MY TICKET ========== -->
+  <div class="box hidden" id="page3">
+    <h2>My Ticket</h2>
+    <div class="ticket">
+      <div class="ticket-top">
+        <h3 style="margin:0">Techfest 2026</h3>
+        <p style="margin:6px 0 0">23 Oct 2026 · 9:00 AM · Computer Science Block</p>
+      </div>
+      <div class="ticket-bottom">
+        <div>
+          <p><b>Name:</b> <span id="tName"></span></p>
+          <p><b>Tickets:</b> <span id="tQty"></span></p>
+          <p><b>Paid:</b> <span id="tPaid"></span></p>
+          <p><b>Booking ID:</b> <span id="tId"></span></p>
+          <span class="badge">Confirmed</span>
+        </div>
+        <div class="qr" id="qr"></div>
+      </div>
+    </div>
+    <button onclick="window.print()">Save ticket as PDF</button>
+    <p style="font-size:13px; color:#64748B">In the window that opens, set Destination to "Save as PDF", then click Save.</p>
+  </div>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>

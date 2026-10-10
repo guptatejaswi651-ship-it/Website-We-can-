@@ -1,0 +1,183 @@
+/* ---------- FONTS (Fleur theme: elegant serif + light sans) ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Jost:wght@300;400;500&display=swap');
+
+/* ---------- THEME COLOURS (change them here) ---------- */
+:root {
+  --blush: #EEDFD6;       /* page background */
+  --peach: #E8CDBA;       /* arch boxes */
+  --clay: #B98C76;        /* darker terracotta, used in gradients */
+  --sand: #D9B8A5;        /* lighter clay, used in gradients */
+  --ink: #1A1210;         /* main dark text and thin lines */
+  --muted: #6B5A50;       /* small grey-brown text */
+  --white: #FFFFFF;
+  --error: #A8402D;
+}
+
+/* ---------- BASICS ---------- */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--blush);
+  color: var(--ink);
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+h2, h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+h2 { font-size: 34px; text-align: center; margin: 0 0 8px; }
+h3 { font-size: 24px; }
+p  { margin: 6px 0; }
+.hidden { display: none; }
+
+/* ---------- HEADER (like the FLEUR logo) ---------- */
+header {
+  background: var(--blush);
+  color: var(--ink);
+  padding: 22px 24px;
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--ink);
+}
+
+/* ---------- ARCH BOX (like "Host an Event") ---------- */
+.box {
+  max-width: 480px;
+  width: calc(100% - 32px);
+  margin: 32px auto;
+  padding: 90px 32px 36px;
+  background: var(--peach);
+  border-radius: 999px 999px 0 0;   /* big radius = arch top */
+  text-align: center;
+}
+.box p { color: var(--muted); }
+
+/* ---------- FORM ---------- */
+label {
+  display: block;
+  margin-top: 16px;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+input, select {
+  width: 100%;
+  padding: 14px;
+  margin-top: 6px;
+  background: var(--white);
+  color: var(--ink);
+  border: 1px solid #9A8A80;
+  border-radius: 0;                 /* square corners like the screenshots */
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+}
+input::placeholder { color: #9A8A80; }
+input:focus, select:focus { outline: 2px solid var(--ink); outline-offset: 0; }
+
+.error {
+  min-height: 18px;
+  margin-top: 12px;
+  color: var(--error);
+  font-size: 14px;
+}
+
+.total {
+  margin-top: 20px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  color: var(--ink);
+}
+
+/* ---------- BUTTONS (white, small capital letters) ---------- */
+button {
+  width: 100%;
+  padding: 16px;
+  margin-top: 18px;
+  background: var(--white);
+  color: var(--ink);
+  border: 1px solid var(--ink);
+  border-radius: 0;
+  font-family: 'Jost', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+button:hover { background: var(--ink); color: var(--blush); }
+
+.pay-btn { background: var(--ink); color: var(--blush); }   /* main action stands out */
+.pay-btn:hover { background: var(--clay); border-color: var(--clay); color: var(--white); }
+
+/* ---------- TICKET ---------- */
+.ticket {
+  background: #FAF5F1;
+  border: 1px solid var(--ink);
+  border-radius: 999px 999px 0 0;   /* arch top again */
+  overflow: hidden;
+  text-align: left;
+  margin-top: 8px;
+}
+.ticket-top {
+  background: linear-gradient(135deg, var(--sand), var(--clay));
+  color: var(--white);
+  padding: 64px 24px 24px;
+  text-align: center;
+}
+.ticket-top h3 { font-size: 30px; }
+.ticket-top p  { color: var(--white); }
+
+.ticket-bottom {
+  padding: 22px;
+  border-top: 1px dashed var(--ink);
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+}
+.ticket-bottom p { margin: 5px 0; color: var(--ink); }
+
+.badge {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 4px 14px;
+  background: var(--peach);
+  border: 1px solid var(--ink);
+  color: var(--ink);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.qr {
+  width: 110px;
+  height: 110px;
+  padding: 5px;
+  background: var(--white);
+  border: 1px solid var(--ink);
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+}
+.qr i   { background: var(--ink); }
+.qr i.w { background: var(--white); }
+
+/* ---------- PRINT / SAVE AS PDF: show only the ticket ---------- */
+@media print {
+  header, button { display: none; }
+  body { background: white; }
+  .box { background: white; border-radius: 0; padding-top: 0; margin: 0 auto; }
+}
