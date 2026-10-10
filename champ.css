@@ -1,0 +1,137 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #FFF8F3;
+    color: #49352D;
+}
+
+.navbar {
+    background: #BDA69B;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #49352D;
+    font-weight: bold;
+}
+
+.hero {
+    background: #BDA69B;
+    padding: 35px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.hero-content {
+    text-align: center;
+    flex: 1;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.event-photo {
+    width: 52%;
+    height: 310px;
+    object-fit: cover;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.about, .games, .details, .register {
+    margin: 25px auto;
+    padding: 30px;
+    width: 86%;
+    border: 1px solid #DDCCC3;
+    border-radius: 10px;
+    background: #FFFCF9;
+}
+
+h2 {
+    margin-bottom: 18px;
+}
+
+.about p, .details p, .register p {
+    line-height: 1.8;
+}
+
+.game-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    text-align: center;
+}
+
+.game-list div {
+    background: #E5D4CB;
+    padding: 20px;
+    border-radius: 10px;
+    min-width: 120px;
+    font-size: 28px;
+}
+
+.game-list h3 {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.register {
+    text-align: center;
+    background: #E5D4CB;
+}
+
+.register a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    background: #49352D;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #BDA69B;
+}
+
+@media (max-width: 650px) {
+    .hero {
+        flex-direction: column;
+    }
+
+    .event-photo {
+        width: 100%;
+        height: 220px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .game-list {
+        justify-content: center;
+    }
+}
+```
