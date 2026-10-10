@@ -2,7 +2,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #fffaf5;
+    background: #FFFFFF;
     color: #38251f;
 }
 
@@ -21,9 +21,16 @@ nav {
     top: 0;
 }
 
-nav span {
-    color: #d66b45;
+ ```css
+nav h2 {
+    color: #362A24 !important;
+    margin: 0;
 }
+
+nav h2 span {
+    color: #362A24 !important;
+}
+```
 
 #menu {
     display: flex;
@@ -224,4 +231,20 @@ input {
     width: 170px;
     height: auto;
     display: block;
+}
+nav h2 {
+    color: #362A24 !important;
+}
+
+nav h2 span {
+    color: #362A24 !important;
+}
+/* UTSAVIKA title only */
+nav .site-title {
+    color: #362A24 !important;
+}
+
+/* Your Next Event heading */
+.ticket h2 {
+    color: #382923 !important;
 }
