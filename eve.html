@@ -7,7 +7,7 @@
   <title>utsavika_event_page</title>
 
   <link rel="stylesheet" href="stylevent.css">
-  <script src="events.js" defer></script>
+  <script src="event.js" defer></script>
 
   <style>
     a:hover {
@@ -46,17 +46,17 @@
     <p>Skip the FOMO. Search fests, tech talks, and events happening right now.</p>
 
     <div class="controls">
-      <input type="text" placeholder="Search events,venues...">
-      <button class="chip active">All</button>
-      <button class="chip">Tech</button>
-      <button class="chip">Party</button>
-      <button class="chip">Sports</button>
+      <input type="text" id="searchBox" placeholder="Search events, venues...">
+      <button class="chip active" data-category="all">All</button>
+      <button class="chip" data-category="Tech">Tech</button>
+      <button class="chip" data-category="Sports">Sports</button>
+      <button class="chip" data-category="Party">Party</button>
     </div>
 
     <div class="grid">
 
 
-      <div class="card">
+      <div class="card" data-category="Party">
         <div class="card-color">
           <img src="freshers.jpeg">
           <span class="badge">Party</span>
@@ -70,7 +70,7 @@
         </div>
       </div>
 
-      <div class="card">
+      <div class="card" data-category="Party">
         <div class="card-color">
           <img src="navrati2.png">
           <span class="badge">Party</span>
@@ -84,7 +84,7 @@
         </div>
       </div>
 
-      <div class="card">
+      <div class="card" data-category="Tech">
         <div class="card-color">
           <img src="Tech Fest .png">
           <span class="badge">Tech</span>
@@ -98,7 +98,7 @@
         </div>
       </div>
 
-      <div class="card">
+      <div class="card" data-category="Party">
         <div class="card-color">
           <img src="diw.png">
           <span class="badge">Party</span>
@@ -112,7 +112,7 @@
         </div>
       </div>
 
-      <div class="card">
+      <div class="card" data-category="Sports">
         <div class="card-color">
           <img src="sports.png">
           <span class="badge">Sports</span>
@@ -126,7 +126,7 @@
         </div>
       </div>
 
-      <div class="card">
+      <div class="card" data-category="Tech">
         <div class="card-color">
           <img src="startup.png">
           <span class="badge">Meetup</span>
