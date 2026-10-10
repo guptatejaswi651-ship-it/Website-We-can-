@@ -1,9 +1,11 @@
 
+/* Utsavika - Same theme as Home page */
+
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #fff0e6;
-    color: #38251f;
+    font-family: Georgia, "Times New Roman", serif;
+    background-color: #f2ece5;
+    color: #382923;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,52 +13,48 @@ body {
 }
 
 .box {
-    background: white;
+    background-color: #bda397;
+    color: #382923;
     padding: 30px;
-    width: 300px;
-    max-width: 85%;
-    border-radius: 15px;
+    width: 320px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(56, 41, 35, 0.15);
     text-align: center;
-    box-shadow: 0 4px 15px #0001;
+    box-sizing: border-box;
 }
 
 h1 {
-    margin-bottom: 5px;
-}
-
-h1 span {
-    color: #d66b45;
+    color: #382923;
+    margin-bottom: 20px;
 }
 
 input {
-    display: block;
     width: 100%;
-    box-sizing: border-box;
     padding: 12px;
-    margin: 12px 0;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+    margin: 10px 0;
+    border: 1px solid #bda397;
+    border-radius: 6px;
+    box-sizing: border-box;
+    background-color: #f2ece5;
+    color: #382923;
+    font-family: inherit;
 }
 
 button {
     padding: 10px 15px;
     border: none;
-    border-radius: 8px;
+    border-radius: 6px;
+    background-color: #382923;
+    color: #fff8f0;
+    font-family: inherit;
     cursor: pointer;
 }
 
 .buttons {
-    margin: 20px 0;
-}
-
-.buttons button {
-    background: #eee;
-}
-
-.buttons .active,
-.submit {
-    background: #38251f;
-    color: white;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
 .submit {
@@ -65,10 +63,11 @@ button {
 }
 
 a {
-    color: #d66b45;
+    color: #382923;
     text-decoration: none;
 }
 
 #message {
-    font-size: 14px;
+    margin-top: 15px;
+    color: #382923;
 }

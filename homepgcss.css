@@ -182,3 +182,46 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+/* Website colour theme */
+body {
+    background-color: #f2ece5;
+    color: #382923;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+/* Headings */
+h1, h2, h3 {
+    color: #382923;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+/* Event cards */
+.card {
+    background-color: #bda397;
+    color: #382923;
+}
+
+/* Buttons */
+button {
+    background-color: #382923;
+    color: #fff8f0;
+    font-family: inherit;
+    border: none;
+    cursor: pointer;
+}
+
+/* Search box */
+input {
+    background-color: #f2ece5;
+    color: #382923;
+    border: 1px solid #bda397;
+    font-family: inherit;
+}
+
+/* Utsavika logo */
+.logo img {
+    width: 170px;
+    height: auto;
+    display: block;
+}
