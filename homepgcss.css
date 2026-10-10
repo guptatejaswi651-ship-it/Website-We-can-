@@ -1,0 +1,184 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fffaf5;
+    color: #38251f;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px;
+}
+
+nav {
+    background: white;
+    padding: 15px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+
+nav span {
+    color: #d66b45;
+}
+
+#menu {
+    display: flex;
+    gap: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#menuBtn {
+    display: none;
+}
+
+.home {
+    padding: 60px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.home h1 {
+    font-size: 42px;
+}
+
+.small, .card a {
+    color: #d66b45;
+}
+
+.btn {
+    display: inline-block;
+    background: #38251f;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+.ticket {
+    background: #f5d6c5;
+    border: 2px dashed #d66b45;
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+}
+
+.ticket:hover, .card:hover {
+    transform: translateY(-5px);
+}
+
+.events {
+    background: #fff0e6;
+    padding: 50px 6%;
+    text-align: center;
+}
+
+#search {
+    padding: 12px;
+    width: 70%;
+    max-width: 400px;
+    border: 1px solid #d9b8a8;
+    border-radius: 20px;
+}
+
+.filters {
+    margin: 20px;
+}
+
+button {
+    padding: 10px 15px;
+    margin: 4px;
+    cursor: pointer;
+    border-radius: 20px;
+    border: 1px solid #d9b8a8;
+}
+
+.filters .active {
+    background: #38251f;
+    color: white;
+}
+
+.event-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding-bottom: 20px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.card p {
+    padding: 0 10px;
+}
+
+.card a {
+    font-weight: bold;
+}
+
+.picture {
+    padding: 25px;
+    font-size: 50px;
+}
+
+.tech { background: #dfe7fa; }
+.culture { background: #f9dfd1; }
+.sports { background: #dcebdc; }
+
+.about {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+footer {
+    text-align: center;
+    background: #38251f;
+    color: white;
+    padding: 20px;
+}
+
+@media (max-width: 650px) {
+    .home {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #menuBtn {
+        display: block;
+        background: white;
+        border: none;
+        font-size: 22px;
+    }
+
+    #menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 55px;
+        left: 0;
+        right: 0;
+        background: white;
+        padding: 20px;
+        text-align: center;
+    }
+
+    #menu.show {
+        display: flex;
+    }
+
+    .event-list {
+        grid-template-columns: 1fr;
+    }
+}
