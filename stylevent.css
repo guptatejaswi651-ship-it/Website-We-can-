@@ -153,6 +153,13 @@ main > p {
   color: var(--bg);
 }
 
+.results-status {
+  min-height: 1.4em;
+  margin: -30px 0 28px;
+  color: var(--text-soft);
+  font-size: 0.82rem;
+}
+
 /* ---------- GRID + CARDS ---------- */
 
 .grid {
@@ -169,6 +176,10 @@ main > p {
   text-align: center;
   display: flex;
   flex-direction: column;
+}
+
+.card[hidden] {
+  display: none;
 }
 
 .card-color {

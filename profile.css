@@ -29,6 +29,38 @@ body {
     font-family: "Inter", sans-serif;
 }
 
+.site-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    width: min(100%, 1220px);
+    min-height: 72px;
+    margin: 0 auto;
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    flex: 0 0 auto;
+    text-decoration: none;
+}
+
+.brand-logo {
+    display: block;
+    width: auto;
+    height: 36px;
+    object-fit: contain;
+}
+
+.site-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
 /* CSS-only sun and flower ornaments add artwork in the side margins. */
 body::before,
 body::after {
@@ -67,7 +99,6 @@ body::after {
         rgb(235 227 219 / 35%);
     box-shadow: 0 0 0 12px rgb(164 131 116 / 13%);
 }
-
 header,
 main,
 footer {
@@ -98,10 +129,40 @@ header h1::after {
     height: 3px;
     margin: 13px auto 11px;
     border-radius: 99px;
-
     content: "";
 }
 
+nav a {
+    padding: 9px 15px;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    color: var(--muted);
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    transition: color 160ms ease, background 160ms ease, border-color 160ms ease;
+}
+
+nav a:hover,
+nav a[aria-current="page"] {
+    border-color: rgb(164 131 116 / 28%);
+    color: var(--gold-deep);
+    background: #D8C9BC;
+}
+
+@media (max-width: 520px) {
+    .site-nav {
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        padding: 12px 0;
+    }
+
+    .site-links {
+        justify-content: flex-start;
+    }
+}
 header p {
     display: table;
     max-width: 100%;
@@ -268,6 +329,15 @@ textarea:focus-visible {
     flex-wrap: wrap;
     gap: 12px;
     padding-top: 2px;
+}
+
+#profile-save-message {
+    min-height: 1.4em;
+    margin: 0;
+    color: var(--gold-deep);
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
 }
 
 button {
