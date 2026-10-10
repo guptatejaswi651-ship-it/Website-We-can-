@@ -10,7 +10,18 @@ html {
     scroll-behavior: smooth;
     scroll-padding-top: 70px;
 }
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--ink);
+}
 
+.brand-logo {
+  height: 36px;
+  width: auto;
+}
 nav {
     background: white;
     padding: 15px 6%;
