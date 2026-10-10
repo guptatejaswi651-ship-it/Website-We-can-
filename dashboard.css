@@ -24,7 +24,20 @@ body {
         var(--page);
     font-family: "Inter", sans-serif;
 }
-
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--ink);
+}
+.brand-logo {
+    display: block;
+    height: 36px;
+    width: auto;
+    object-fit: contain;
+    flex: 0 0 auto;
+}
 /* Quiet sun and flower artwork in the outer margins. */
 body::before,
 body::after {
