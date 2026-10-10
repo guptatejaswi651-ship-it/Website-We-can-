@@ -12,6 +12,19 @@
   box-sizing: border-box;
 }
 
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.brand-logo {
+  height: 36px;
+  width: auto;
+}
+
 body {
   margin: 0;
   background: var(--bg);
