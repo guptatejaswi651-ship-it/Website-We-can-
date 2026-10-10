@@ -445,3 +445,81 @@ button:disabled:hover {
     cursor: not-allowed;
     transform: none;
 }
+
+.ticket-dialog {
+    width: min(440px, calc(100% - 32px));
+    padding: 0;
+    border: 1px solid rgb(164 131 116 / 42%);
+    border-radius: 18px;
+    color: var(--ink);
+    background: var(--paper);
+    box-shadow: 0 24px 70px rgb(58 45 40 / 26%);
+}
+
+.ticket-dialog::backdrop {
+    background: rgb(35 29 26 / 48%);
+    backdrop-filter: blur(3px);
+}
+
+.ticket-dialog__content {
+    position: relative;
+    padding: 28px;
+}
+
+.ticket-dialog__close {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    width: 34px;
+    min-height: 34px;
+    margin: 0;
+    padding: 0;
+    border: 1px solid rgb(164 131 116 / 30%);
+    border-radius: 50%;
+    color: var(--gold-deep);
+    background: transparent;
+    font-size: 22px;
+    line-height: 1;
+}
+
+.ticket-dialog__eyebrow {
+    margin: 0 0 7px;
+    color: var(--gold-deep);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .14em;
+}
+
+.ticket-dialog h2 {
+    margin: 0 36px 18px 0;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 24px;
+}
+
+.ticket-dialog dl {
+    display: grid;
+    gap: 10px;
+    margin: 0;
+}
+
+.ticket-dialog dl > div {
+    display: grid;
+    grid-template-columns: 90px minmax(0, 1fr);
+    gap: 12px;
+    padding-bottom: 9px;
+    border-bottom: 1px solid rgb(164 131 116 / 18%);
+}
+
+.ticket-dialog dt {
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.ticket-dialog dd {
+    margin: 0;
+    color: var(--ink);
+    font-size: 13px;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+}

@@ -270,6 +270,15 @@ textarea:focus-visible {
     padding-top: 2px;
 }
 
+#profile-save-message {
+    min-height: 1.4em;
+    margin: 0;
+    color: var(--gold-deep);
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+}
+
 button {
     min-height: 47px;
     padding: 0 21px;
