@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <header>
+        <h1>Student Profile</h1>
+        <p>Create your profile for the Smart Event Management Portal</p>
+    </header>
+
+    <main>
+        <form>
+            <fieldset>
+                <legend>Personal Information</legend>
+                <div class="form-field">
+                    <label for="fullname">Full Name:</label>
+                    <input type="text" id="fullname" name="fullname" required>
+                </div>
+                <div class="form-field">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div class="form-field">
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob">
+                </div>
+                <div class="form-field">
+                    <span class="field-label">Gender:</span>
+                    <div class="option-list">
+                        <label><input type="radio" name="gender" value="male"> Male</label>
+                        <label><input type="radio" name="gender" value="female"> Female</label>
+                        <label><input type="radio" name="gender" value="other"> Other</label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>College Information</legend>
+                <div class="form-field">
+                    <label for="studentid">Student ID:</label>
+                    <input type="text" id="studentid" name="studentid" required>
+                </div>
+                <div class="form-field">
+                    <label for="college">College Name:</label>
+                    <input type="text" id="college" name="college" required>
+                </div>
+                <div class="form-field">
+                    <label for="course">Course / Branch:</label>
+                    <input type="text" id="course" name="course" placeholder="e.g. B.Tech CSE">
+                </div>
+                <div class="form-field">
+                    <label for="year">Year:</label>
+                    <select id="year" name="year">
+                        <option value="">Select Year</option>
+                        <option value="1">1st Year</option>
+                        <option value="2">2nd Year</option>
+                        <option value="3">3rd Year</option>
+                        <option value="4">4th Year</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Interests</legend>
+                <p>What type of events are you interested in?</p>
+                <div class="option-list option-list--vertical">
+                    <label><input type="checkbox" name="interests" value="hackathons"> Hackathons</label>
+                    <label><input type="checkbox" name="interests" value="workshops"> Workshops</label>
+                    <label><input type="checkbox" name="interests" value="coding"> Coding Competitions</label>
+                    <label><input type="checkbox" name="interests" value="cultural"> Cultural Events</label>
+                    <label><input type="checkbox" name="interests" value="sports"> Sports</label>
+                    <label><input type="checkbox" name="interests" value="entrepreneurship"> Entrepreneurship</label>
+                    <label><input type="checkbox" name="interests" value="seminars"> Seminars</label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Event Preferences</legend>
+                <div class="form-field">
+                    <label for="participation">Preferred Participation:</label>
+                    <select id="participation" name="participation">
+                        <option value="">Select</option>
+                        <option value="participant">Participant</option>
+                        <option value="volunteer">Volunteer</option>
+                        <option value="organizer">Organizer</option>
+                    </select>
+                </div>
+                <div class="form-field">
+                    <label for="eventtype">Preferred Event Type:</label>
+                    <select id="eventtype" name="eventtype">
+                        <option value="">Select Event Type</option>
+                        <option value="technical">Technical</option>
+                        <option value="cultural">Cultural</option>
+                        <option value="sports">Sports</option>
+                        <option value="academic">Academic</option>
+                        <option value="entrepreneurship">Entrepreneurship</option>
+                        <option value="social">Social</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>About You</legend>
+                <div class="form-field">
+                    <label for="about">Tell us something about yourself:</label>
+                    <textarea id="about" name="about" placeholder="Write a short introduction about yourself..."></textarea>
+                </div>
+            </fieldset>
+
+            <div class="form-actions">
+                <button type="submit">Create Profile</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <p><a class="profile-back" href="studashboard.html">← Back to Dashboard</a></p>
+        <p>Smart Event Management Portal</p>
+    </footer>
+</body>
+</html>

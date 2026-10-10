@@ -49,14 +49,11 @@ body {
   font-family: "Cormorant Garamond", Georgia, serif;
   font-size: 1.25rem;
 }
-
-
 .deco {
   position: fixed;
   z-index: 0;
   pointer-events: none;
 }
-
 
 .deco-sun {
   top: 22%;
@@ -88,17 +85,14 @@ body {
   height: 200px;
 }
 
-
 main {
   position: relative;
   z-index: 1;
 }
 
-
 @media (max-width: 700px) {
   .deco { display: none; }
 }
-
 
 html { scroll-behavior: smooth; }
 
@@ -139,4 +133,3 @@ html { scroll-behavior: smooth; }
 
 main { padding-top: 40px; }
  
-
