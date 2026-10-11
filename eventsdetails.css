@@ -15,11 +15,14 @@ html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
-  background: var(--page);
+  background: var(--bg);
   color: var(--ink);
-  font-family: var(--font-body);
-  font-weight: 300;
-  line-height: 1.7;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  position: relative;
+  overflow-x: hidden; /* stops rotated stickers causing sideways scroll */
 }
 
 .hero {
