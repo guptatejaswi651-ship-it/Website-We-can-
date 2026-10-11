@@ -7,8 +7,11 @@
     <title>Student Dashboard | CampusEvents</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="dashboard.css">
+    <script src="studashboard.js" defer></script>
 </head>
 
 <body>
@@ -26,7 +29,7 @@
             <a href="studashboard.html">Dashboard</a>
             <a href="stu_pro.html">Profile</a>
 
-            
+
         </nav>
     </header>
 
@@ -38,9 +41,7 @@
 
             <h2>Student Profile</h2>
 
-            <img src="my pic.jpeg"
-                 alt="Student Profile Photo"
-                 width="120">
+            <img src="my pic.jpeg" alt="Student Profile Photo" width="120">
 
             <h1 id="studentName">Student Name</h1>
 
@@ -130,6 +131,24 @@
 
         </section>
 
+        <div id="ticket-modal" class="ticket-modal" hidden>
+            <div class="ticket-content">
+                <button type="button" id="close-ticket">✕</button>
+
+                <h2>Event Ticket 🎟️</h2>
+
+                <h3 id="ticket-event-name"></h3>
+
+                <p id="ticket-date"></p>
+                <p id="ticket-time"></p>
+                <p id="ticket-venue"></p>
+                <p id="ticket-id"></p>
+
+                <p class="ticket-note">
+                    Event details at one place!
+                </p>
+            </div>
+        </div>
 
         <!-- Event History -->
         <section>
