@@ -71,3 +71,19 @@ a {
     margin-top: 15px;
     color: #382923;
 }
+.login-logo {
+    display: block;
+    width: 150px;
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto 15px;
+
+}
+/* Sign Up form only */
+#signupForm .signup-logo {
+    display: block;
+    width: 120px;
+    height: auto;
+    margin: 0 auto 15px;
+    object-fit: contain;
+}
