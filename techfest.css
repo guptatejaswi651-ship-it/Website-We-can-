@@ -138,3 +138,15 @@ footer {
     margin: 30px auto;
     border-radius: 16px;
 }
+.brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.brand-logo {
+    width: 150px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
